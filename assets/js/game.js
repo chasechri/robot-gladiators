@@ -3,13 +3,11 @@ let playerHealth = 100;
 let playerAttack = 10;
 let playerMoney = 10;
 
-console.log(playerName, playerAttack, playerHealth);
-
-let enemyName = "Roborto";
+let enemyNames = ["Rorborto", "Amy Android", "Robo Trumble"];
 let enemyHealth = 50;
 let enemyAttack = 12;
 
-let fight = function () {
+let fight = function (enemyName) {
   window.alert("Welcome to Robot Gladiators!");
 
   let promptFight = window.prompt(
@@ -64,4 +62,8 @@ let fight = function () {
   }
 };
 
-fight();
+for (let i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
+
+// fight();
